@@ -13,10 +13,8 @@ std::unordered_map<std::string, std::string> mapFromIni(std::string path, std::s
 	std::regex match_pattern = std::regex("^[ \\t]*([a-zA-Z_][\\w]*)[^\\S\\n]*=[^\\S\\n]*(?:(?:\"([\\S\\t ]*)\")|([\\w\\.:\\/\\-\\\\]+))", std::regex_constants::optimize);
 	std::smatch match = std::smatch();
 
-	retval.insert_or_assign(errorKey, "");
-
 	if (!ifs.is_open()) {
-		retval.insert_or_assign(errorKey, "Could not load the file! ifs.is_open() == false");
+		retval.insert_or_assign(errorKey, "Could not open the file! ifs.is_open() == false");
 	} else {
 		while (ifs.good()) {
 			std::getline(ifs, line);
