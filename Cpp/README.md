@@ -1,10 +1,9 @@
 # C++ code snippets
-Various code snippets for Blender
+Various C++ code snippets
 
-* ### blender_copyBoneTransforms.py
-    
-  Copies bone transforms from **InputObj** to **Armature** object.
+* ### iniParser.cpp
+  Parses a file and returns a map of key-value pairs. <br/>
+  The returning map contains an \_\_error\_\_ key which contains info about errors, check the output_map.count("\_\_error\_\_") to check for error.
+  
 
   ##### Keep in mind:
-    *Global Transforms Only: The script copies global transforms, not local ones. Make sure to align root bones properly before running the script.
--   *Matching Bones**: Only bones with matching names will be copied. Any bones without a match will need manual adjustment.
