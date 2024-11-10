@@ -1,4 +1,4 @@
-# UE5 code snippets
+# C++ code snippets
 Various code snippets for Blender
 
 * ### blender_copyBoneTransforms.py
